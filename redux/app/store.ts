@@ -9,6 +9,10 @@ export const store = configureStore({
     [weatherApi.reducerPath]: weatherApi.reducer,
     [weatherBitApi.reducerPath]: weatherBitApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware()
+      .concat(weatherApi.middleware)
+      .concat(weatherBitApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

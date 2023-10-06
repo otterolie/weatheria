@@ -50,46 +50,44 @@ const CurrentWeather: NextPage = () => {
   }
 
   return (
-    <>
-      <Stack marginBottom={5} className="xl:h-[570px] 2k:h-[910px]">
-        <Box
-          overflow="hidden"
-          bg={boxBackgroundColor}
-          className="rounded w-full xl:w-[320px] h-[420px] hover:border-sky-500 hover:border-[2px] md:hover:scale-[102%] transition-all duration-300 text-center xl:h-full "
-        >
-          <div className="w-full p-4 h-[250px] 2k:h-[550px] object-contain relative">
-            <Image
-              src={`/images/weather/${imageURL}`}
-              alt={`Weather Icon`}
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
-          </div>
+    <Stack marginBottom={5} className="xl:h-[570px] 2k:h-[910px]">
+      <Box
+        overflow="hidden"
+        bg={boxBackgroundColor}
+        className="rounded w-full xl:w-[320px] h-[420px] hover:border-sky-500 hover:border-[2px] md:hover:scale-[102%] transition-all duration-300 text-center xl:h-full"
+      >
+        <div className="w-full p-4 h-[250px] 2k:h-[550px] object-contain relative">
+          <Image
+            src={`/images/weather/${imageURL}`}
+            alt="Weather Icon"
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
+        </div>
 
-          <Box py="6" px="4" className="lg:px-5">
-            <Heading as="h2" size="xl" mb={2} className="2k:text-2xl">
-              {weather?.name}, {weather?.sys?.country}
-            </Heading>
-            <Text className="text-sm md:text-[15px] md:leading-6 2k:text-lg">
-              The weather condition in {weather?.name}, {weather?.sys?.country}{" "}
-              is described as {""}
-              {weather?.weather?.map((weather: WeatherElement) => (
-                <span className="font-bold " key={weather?.id}>
-                  {weather?.description}
-                </span>
-              ))}
-              <Text className="pb-8">
-                <span className="font-semibold">
-                  {Math.ceil(Number(weather?.main?.temp - 273))}° C and humidity
-                  of {weather?.main?.humidity}%.
-                </span>
-              </Text>
+        <Box py="6" px="4" className="lg:px-5">
+          <Heading as="h2" size="xl" mb={2} className="2k:text-2xl">
+            {weather?.name}, {weather?.sys?.country}
+          </Heading>
+          <Text className="text-sm md:text-[15px] md:leading-6 2k:text-lg">
+            The weather condition in {weather?.name}, {weather?.sys?.country} is
+            described as {""}
+            {weather?.weather?.map((weather: WeatherElement) => (
+              <span className="font-bold" key={weather?.id}>
+                {weather?.description}
+              </span>
+            ))}
+            <Text className="pb-8">
+              <span className="font-semibold">
+                {Math.ceil(Number(weather?.main?.temp - 273))}° C and humidity
+                of {weather?.main?.humidity}%.
+              </span>
             </Text>
-          </Box>
+          </Text>
         </Box>
-      </Stack>
-    </>
+      </Box>
+    </Stack>
   );
 };
 

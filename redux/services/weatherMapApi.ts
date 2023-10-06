@@ -1,8 +1,17 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+// Helper function to create requests
 const createRequest = (url: string) => ({ url });
 
-//Define a service using a base URL and expected endpoints
+// Check if environment variables are defined
+if (
+  !process.env.NEXT_PUBLIC_WEATHER_URL ||
+  !process.env.NEXT_PUBLIC_WEATHER_API_KEY
+) {
+  console.error("Weather API environment variables are not defined");
+}
+
+// API service definition
 export const weatherApi = createApi({
   reducerPath: "weatherApi",
   baseQuery: fetchBaseQuery({
@@ -24,4 +33,5 @@ export const weatherApi = createApi({
   }),
 });
 
+// Export hooks for usage in functional components
 export const { useGetForecastQuery, useGetWeatherQuery } = weatherApi;

@@ -23,17 +23,14 @@ import { getQueryData } from "../../redux/slices/locationSlice";
 
 const Header: NextPage = () => {
   const dispatch = useDispatch();
-
   const { colorMode, toggleColorMode } = useColorMode();
-
   const [search, setSearch] = useState("Seoul");
 
-  //dispatch the action on mount
   useEffect(() => {
     dispatch(getQueryData(search));
-  }, [search]);
+  }, [search, dispatch]); // Added dispatch to the dependency array
 
-  //handle search
+  // handle search
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     dispatch(getQueryData(search));
@@ -41,7 +38,6 @@ const Header: NextPage = () => {
   };
 
   const { data: weather } = useGetWeatherQuery(search);
-
   const bg = useColorModeValue("#ffffff", "#222");
 
   return (

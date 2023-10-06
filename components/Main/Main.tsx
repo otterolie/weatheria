@@ -20,7 +20,7 @@ const Main = () => {
   useEffect(() => {
     dispatch(getLatitude(weather?.coord?.lat));
     dispatch(getLongtitude(weather?.coord?.lon));
-  }, [weather]);
+  }, [weather, dispatch]); // Added dispatch to the dependency array
 
   return (
     <>
