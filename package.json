@@ -23,6 +23,7 @@
     "react-redux": "^8.0.4"
   },
   "devDependencies": {
+    "@types/luxon": "^3.3.2",
     "@types/node": "^18.11.3",
     "@types/react": "^18.0.21",
     "autoprefixer": "^10.4.12",
