@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Box, Text, Heading } from "@chakra-ui/react";
-
+import Image from "next/image";
 interface Props {
   sunriseTime: string;
   sunsetTime: string;
@@ -24,6 +24,14 @@ const SunriseSunsetCard: FC<Props> = ({ sunriseTime, sunsetTime }) => {
       <Text>
         <strong>Sunset:</strong> {sunsetTime}
       </Text>
+      <div className="w-full p-4 h-[100px] 2k:h-[200px] object-contain relative mt-2">
+        <Image
+          src="/images/weather/sunset-sunrise.svg"
+          alt="Weather: Scattered Clouds"
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
     </Box>
   );
 };

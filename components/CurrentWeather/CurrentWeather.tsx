@@ -18,35 +18,35 @@ const CurrentWeather: NextPage = () => {
     weather?.weather[0]?.description === "clear sky" ||
     weather?.weather[0]?.description === "few clouds"
   ) {
-    imageURL = `clear-sky.png`;
+    imageURL = `clear-sky.svg`;
   } else if (weather?.weather[0]?.description === "scattered clouds") {
-    imageURL = `scattered-clouds.png`;
+    imageURL = `scattered-clouds.svg`;
   } else if (
     weather?.weather[0]?.description === "overcast clouds" ||
     weather?.weather[0]?.description === "broken clouds"
   ) {
-    imageURL = `scattered-clouds.png`;
+    imageURL = `scattered-clouds.svg`;
   } else if (
     weather?.weather[0]?.description === "light rain" ||
     weather?.weather[0]?.description === "moderate rain" ||
     weather?.weather[0]?.description === "heavy rain" ||
     weather?.weather[0]?.description === "heavy intensity rain"
   ) {
-    imageURL = `rain-clouds.png`;
+    imageURL = `rain-clouds.svg`;
   } else if (weather?.weather[0]?.description === "thundercast clouds") {
-    imageURL = `thundercast-clouds.png`;
+    imageURL = `thundercast-clouds.svg`;
   } else if (weather?.weather[0]?.description === "winter") {
-    imageURL = `winter-clouds.png`;
+    imageURL = `winter-clouds.svg`;
   } else if (weather?.weather[0]?.description === "mist") {
-    // imageURL = `mist.png`;
-    imageURL = `winter-clouds.png`;
+    // imageURL = `mist.svg`;
+    imageURL = `winter-clouds.svg`;
   } else if (
     weather?.weather[0]?.description === "light snow" ||
     weather?.weather[0]?.description === "Light snow"
   ) {
-    imageURL = `snow.png`;
+    imageURL = `snow.svg`;
   } else {
-    imageURL = `clouds.png`;
+    imageURL = `clouds.svg`;
   }
 
   return (

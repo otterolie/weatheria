@@ -21,19 +21,19 @@ const HourlyForecastCard: NextPage<Props> = ({ hour, index, forecast }) => {
     // forecast?.weather[0]?.description === "few clouds" ||
     forecast?.weather[0]?.description === "Few clouds"
   ) {
-    imageURL = `clear-sky.png`;
+    imageURL = `clear-sky.svg`;
   } else if (
     forecast?.weather[0]?.description === "scattered clouds" ||
     forecast?.weather[0]?.description === "Scattered clouds"
   ) {
-    imageURL = `scattered-clouds.png`;
+    imageURL = `scattered-clouds.svg`;
   } else if (
     forecast?.weather[0]?.description === "overcast clouds" ||
     forecast?.weather[0]?.description === "Overcast clouds" ||
     forecast?.weather[0]?.description === "broken clouds" ||
     forecast?.weather[0]?.description === "Broken clouds"
   ) {
-    imageURL = `scattered-clouds.png`;
+    imageURL = `scattered-clouds.svg`;
   } else if (
     forecast?.weather[0]?.description === "light rain" ||
     forecast?.weather[0]?.description === "Light rain" ||
@@ -43,34 +43,34 @@ const HourlyForecastCard: NextPage<Props> = ({ hour, index, forecast }) => {
     forecast?.weather[0]?.description === "Heavy rain" ||
     forecast?.weather[0]?.description === "heavy intensity rain"
   ) {
-    imageURL = `rain-clouds.png`;
+    imageURL = `rain-clouds.svg`;
   } else if (
     forecast?.weather[0]?.description === "Thunderstorm with rain" ||
     forecast?.weather[0]?.description === "Thunderstorm with heavy rain"
   ) {
-    imageURL = `thundercast-clouds.png`;
+    imageURL = `thundercast-clouds.svg`;
   } else if (
     forecast?.weather[0]?.description === "thundercast clouds" ||
     forecast?.weather[0]?.description === "Thundercast clouds"
   ) {
-    imageURL = `thundercast-clouds.png`;
+    imageURL = `thundercast-clouds.svg`;
   } else if (
     forecast?.weather[0]?.description === "winter" ||
     forecast?.weather[0]?.description === "Winter"
   ) {
-    imageURL = `winter-clouds.png`;
+    imageURL = `winter-clouds.svg`;
   } else if (
     forecast?.weather[0]?.description === "mist" ||
     forecast?.weather[0]?.description === "Mist"
   ) {
-    imageURL = `winter-clouds.png`;
+    imageURL = `winter-clouds.svg`;
   } else if (
     forecast?.weather[0]?.description === "light snow" ||
     forecast?.weather[0]?.description === "Light snow"
   ) {
-    imageURL = `snow.png`;
+    imageURL = `snow.svg`;
   } else {
-    imageURL = `clouds.png`;
+    imageURL = `clouds.svg`;
   }
 
   const description = capitalizeFirstLetter(forecast?.weather[0]?.description);
