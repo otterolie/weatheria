@@ -9,16 +9,14 @@ Weatheria a weather application that keep track of the weather around the world 
 - [Built with](#built-with)
 - [Author](#author)
 
-
 ### Screenshot
 
 ![](./screenshots/Darkmode.JPG)
-![](./screenshots/Lightmode.JPG)
 
-### Links
+![](./screenshots/Lightmode.JPG)### Links
 
-- Solution URL: [https://github.com/webstar0411/weatheria](https://github.com/webstar0411/weatheria)
-- Live Site URL: [https://weatheria-taupe.vercel.app/](https://weatheria-taupe.vercel.app/)
+- Solution URL: <https://github.com/webstar0411/weatheria>
+- Live Site URL: <https://weatheria-taupe.vercel.app/>
 
 1. Clone the repo
 
@@ -32,7 +30,13 @@ Weatheria a weather application that keep track of the weather around the world 
    npm install
    ```
 
-3. Run app
+3. Install NPM build
+
+   ```sh
+   npm run build
+   ```
+
+4. Run app
 
    ```sh
    npm start

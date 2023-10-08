@@ -24,11 +24,11 @@ import { getQueryData } from "../../redux/slices/locationSlice";
 const Header: NextPage = () => {
   const dispatch = useDispatch();
   const { colorMode, toggleColorMode } = useColorMode();
-  const [search, setSearch] = useState("Seoul");
+  const [search, setSearch] = useState("Rotterdam");
 
   useEffect(() => {
     dispatch(getQueryData(search));
-  }, [search, dispatch]); // Added dispatch to the dependency array
+  }, [search, dispatch]);
 
   // handle search
   const handleSubmit = (e: React.FormEvent) => {
@@ -54,7 +54,7 @@ const Header: NextPage = () => {
               >
                 {weather?.name
                   ? `${weather?.name}, ${weather?.sys?.country}`
-                  : "Weatheria"}
+                  : "Otter-cast"}
               </Heading>
             </Flex>
           </div>
@@ -76,8 +76,11 @@ const Header: NextPage = () => {
               {colorMode === "light" ? <FaMoon /> : <BsSun />}
             </Button>
             <div className="hidden md:block">
-              <Tooltip label="Hello, Greetings!" placement="bottom">
-                <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
+              <Tooltip label="Hi, hi - this is a test" placement="bottom">
+                <Avatar
+                  name="Otter Olie"
+                  src="https://pbs.twimg.com/profile_images/1550542642261491713/4qI2Pezo_400x400.png"
+                />
               </Tooltip>
             </div>
           </Flex>

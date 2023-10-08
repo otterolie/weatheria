@@ -7,7 +7,6 @@ const weatherBitHeaders = {
 
 const createRequest = (url: string) => ({ url, headers: weatherBitHeaders });
 
-//Define a service using a base URL and expected endpoints
 export const weatherBitApi = createApi({
   reducerPath: "weatherBitApi",
   baseQuery: fetchBaseQuery({
